@@ -24,7 +24,7 @@ std::string decrypt_caesar (std::string word, int inc)
    return word;
 }
 
-std::string phrase,crypt;
+std::string phrase;
 int inc;
 
 int main() {
