@@ -33,8 +33,6 @@ int main() {
     std::getline(std::cin, phrase);
     std::cout << "Input shift:";
     std::cin >> inc;
-   // std::cout << "Crypt or Decrypt (y/n)?";
-   // std::cin >> crypt;
     std::cout <<"Crypt: " << encrypt_caesar(phrase,inc) << "\n";
     std::cout <<"Decrypt: " << decrypt_caesar(encrypt_caesar(phrase, inc), inc);
     return 0;
