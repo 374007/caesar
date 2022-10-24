@@ -2,7 +2,19 @@
 
 std::string encrypt_caesar(std::string word, int inc)
 {
- return 0;
+ for  (int i=0; i<word.length();i++) {
+   if ( word[i] >='a' && word[i]<='z') {
+     int count = int(word[i]) - int('a');
+     count +=inc;
+     word[i] = count%26;
+   }
+   else if ( word[i] >='A' && word[i]<='Z') {
+
+   }
+   else word[i]='*';
+
+ }
+ return word;
 }
 
 std::string decrypt_caesar (std::string word, int inc)
@@ -21,7 +33,7 @@ int main() {
     std::cin >> inc;
     std::cout << "Crypt or Decrypt (y/n)?";
     std::cin >> crypt;
-
+    std::cout << encrypt_caesar(phrase,inc);
 
     return 0;
 }
